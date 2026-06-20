@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://cd3xuegkxenk2"]
+
+[ext_resource type="Script" uid="uid://cfml51qyg5t87" path="res://options_menu.gd" id="1_t1lix"]
+[ext_resource type="FontFile" uid="uid://mbobbt7fwx74" path="res://vhs-vcr-osd.ttf" id="2_4gmlt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t1lix"]
+
+[node name="Options_Menu" type="Control" unique_id=1119627835]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_t1lix")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1603406747]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -752.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TabContainer" type="TabContainer" parent="VBoxContainer" unique_id=1549950861]
+layout_mode = 2
+size_flags_vertical = 3
+current_tab = 0
+
+[node name="Graphics" type="VBoxContainer" parent="VBoxContainer/TabContainer" unique_id=314281911]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="FullScreenToggle" type="CheckButton" parent="VBoxContainer/TabContainer/Graphics" unique_id=1851146243]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4gmlt")
+text = "Fullscreen"
+
+[node name="Controls" type="VBoxContainer" parent="VBoxContainer/TabContainer" unique_id=1981697811]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Audio" type="VBoxContainer" parent="VBoxContainer/TabContainer" unique_id=2097441933]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Back" type="Button" parent="VBoxContainer" unique_id=131593910]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("2_4gmlt")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_t1lix")
+text = "Back"
+alignment = 0
+
+[connection signal="toggled" from="VBoxContainer/TabContainer/Graphics/FullScreenToggle" to="." method="_on_full_screen_toggle_toggled"]
+[connection signal="pressed" from="VBoxContainer/Back" to="." method="_on_back_pressed"]

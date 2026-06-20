@@ -1,0 +1,22 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1781913972
+control.gd::GDScript::41312233996932238::1781913676::0::1::::<>Control<><>0<>0<><>::
+game.tscn::PackedScene::3224312277146171875::1781913920::0::1::::<><><>0<>0<><>::uid://mbobbt7fwx74::::res://vhs-vcr-osd.ttf<>uid://dohwp3jdkvpdt::::res://pause_menu.gd<>uid://cd3xuegkxenk2::::res://options_menu.tscn
+icon.svg::CompressedTexture2D::562028481637715166::1781396261::1781771047::1::::<><><>0<>0<>2d22ddc66ddc4eb3fe9ee0f792efb6ac<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+main_menu.tscn::PackedScene::477571394997645111::1781910001::0::1::::<><><>0<>0<><>::uid://ceotxdeyv1tty::::res://output.ogv<>uid://uan24ov1i3w::::res://control.gd<>uid://mbobbt7fwx74::::res://vhs-vcr-osd.ttf<>uid://cd3xuegkxenk2::::res://options_menu.tscn
+options_menu.gd::GDScript::5149280970786304158::1781913342::0::1::::<>Control<><>0<>0<><>::
+options_menu.tscn::PackedScene::5042642901973189235::1781913676::0::1::::<><><>0<>0<><>::uid://cfml51qyg5t87::::res://options_menu.gd<>uid://mbobbt7fwx74::::res://vhs-vcr-osd.ttf
+output.ogv::VideoStreamTheora::5083692891486369802::1781404357::0::1::::<><><>0<>0<><>::
+pause_menu.gd::GDScript::8157720551747166877::1781913430::0::1::::<>CanvasLayer<><>0<>0<><>::
+README (1).md::TextFile::-1::1781503700::0::1::::<><><>0<>0<><>::
+README.md::TextFile::-1::1781396015::0::1::::<><><>0<>0<><>::
+vhs-vcr-osd.ttf::FontFile::845182408439225465::1781497554::1781771047::1::::<><><>0<>0<>eedcb00afbf438d18a3e6556961a9ea1<>res://.godot/imported/vhs-vcr-osd.ttf-337be1d2010653f83f5f76a162e15204.fontdata::
+::res://addons/::1781398403
+::res://addons/godot_super-wakatime/::1781398442
+api_key_prompt.tscn::PackedScene::3919262858641749045::1781398394::0::1::::<><><>0<>0<><>::
+counter.tscn::PackedScene::6849360014225833986::1781398394::0::1::::<><><>0<>0<><>::
+decompressor.gd::GDScript::513498479588648040::1781398394::0::1::::<>RefCounted<><>0<>0<><>::
+godot_super-wakatime.gd::GDScript::6277149880384411866::1781398394::0::1::::<>EditorPlugin<><>0<>1<><>::
+plugin.cfg::TextFile::-1::1781398394::0::1::::<><><>0<>0<><>::
+README.md::TextFile::-1::1781398394::0::1::::<><><>0<>0<><>::
+utils.gd::GDScript::5251015809120159908::1781398394::0::1::::<>RefCounted<><>0<>0<><>::

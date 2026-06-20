@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://g2lsb7oeo47t"]
+
+[ext_resource type="VideoStream" uid="uid://ceotxdeyv1tty" path="res://output.ogv" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://uan24ov1i3w" path="res://control.gd" id="1_fu7sn"]
+[ext_resource type="FontFile" uid="uid://mbobbt7fwx74" path="res://vhs-vcr-osd.ttf" id="2_7vrkn"]
+[ext_resource type="PackedScene" uid="uid://cd3xuegkxenk2" path="res://options_menu.tscn" id="4_jix8l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7vrkn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fu7sn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jix8l"]
+
+[node name="Main Menu" type="Node2D" unique_id=323227367]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1780568538]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1029974130]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fu7sn")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CanvasLayer/Control" unique_id=1640889904]
+z_index = -99
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_06t4h")
+autoplay = true
+expand = true
+loop = true
+
+[node name="Title" type="Label" parent="CanvasLayer/Control" unique_id=650178813]
+layout_mode = 0
+offset_right = 142.0
+offset_bottom = 23.0
+text = "Roaming Shadows"
+
+[node name="Play" type="Button" parent="CanvasLayer/Control" unique_id=282372103]
+layout_mode = 0
+offset_top = 27.0
+offset_right = 142.0
+offset_bottom = 95.0
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7vrkn")
+text = "Play"
+alignment = 0
+
+[node name="Options" type="Button" parent="CanvasLayer/Control" unique_id=1171247657]
+layout_mode = 0
+offset_top = 99.0
+offset_right = 142.0
+offset_bottom = 167.0
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fu7sn")
+text = "Options"
+alignment = 0
+
+[node name="Quit" type="Button" parent="CanvasLayer/Control" unique_id=887165452]
+layout_mode = 0
+offset_top = 171.0
+offset_right = 142.0
+offset_bottom = 239.0
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jix8l")
+text = "Quit"
+alignment = 0
+
+[node name="Options_Menu" parent="CanvasLayer/Control" unique_id=1119627835 instance=ExtResource("4_jix8l")]
+layout_mode = 1
+
+[connection signal="mouse_entered" from="CanvasLayer/Control/Play" to="CanvasLayer/Control" method="_on_play_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Control/Play" to="CanvasLayer/Control" method="_on_play_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer/Control/Play" to="CanvasLayer/Control" method="_on_play_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/Control/Options" to="CanvasLayer/Control" method="_on_options_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Control/Options" to="CanvasLayer/Control" method="_on_options_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer/Control/Options" to="CanvasLayer/Control" method="_on_options_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/Control/Quit" to="CanvasLayer/Control" method="_on_quit_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Control/Quit" to="CanvasLayer/Control" method="_on_quit_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer/Control/Quit" to="CanvasLayer/Control" method="_on_quit_pressed"]

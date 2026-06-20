@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://bl647mwnfldpr"]
+
+[ext_resource type="FontFile" uid="uid://mbobbt7fwx74" path="res://vhs-vcr-osd.ttf" id="1_80nbo"]
+[ext_resource type="Script" uid="uid://dohwp3jdkvpdt" path="res://pause_menu.gd" id="1_e2o6t"]
+[ext_resource type="PackedScene" uid="uid://cd3xuegkxenk2" path="res://options_menu.tscn" id="1_feb5d"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_80nbo"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2o6t"]
+bg_color = Color(0, 0, 0, 0.15686275)
+
+[node name="Game" type="Node3D" unique_id=626415217]
+
+[node name="Options_Menu" parent="." unique_id=1119627835 instance=ExtResource("1_feb5d")]
+process_mode = 3
+
+[node name="Pause Menu" type="CanvasLayer" parent="." unique_id=2075985156]
+process_mode = 3
+script = ExtResource("1_e2o6t")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Pause Menu" unique_id=243569425]
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -35.0
+offset_right = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Resume" type="Button" parent="Pause Menu/VBoxContainer" unique_id=583250465]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_80nbo")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_80nbo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e2o6t")
+text = "Resume"
+autowrap_mode = 2
+
+[node name="Options" type="Button" parent="Pause Menu/VBoxContainer" unique_id=852144206]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_80nbo")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_80nbo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e2o6t")
+text = "Options"
+
+[node name="Quit" type="Button" parent="Pause Menu/VBoxContainer" unique_id=1491215725]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_80nbo")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_80nbo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e2o6t")
+text = "Quit"
+
+[connection signal="pressed" from="Pause Menu/VBoxContainer/Resume" to="Pause Menu" method="_on_resume_pressed"]
+[connection signal="pressed" from="Pause Menu/VBoxContainer/Options" to="Pause Menu" method="_on_options_pressed"]
+[connection signal="pressed" from="Pause Menu/VBoxContainer/Quit" to="Pause Menu" method="_on_quit_pressed"]
